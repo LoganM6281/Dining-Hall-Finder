@@ -1,7 +1,18 @@
 from drafter import *
 from dataclasses import dataclass
 import json
+set_website_title("Dining Hall Finder")
 
+set_site_information(
+    author="Logan Mattie",
+    description="A simple dining hall menu viewer for UD students.",
+    sources="ChatGPT",
+    planning=Link(
+        "CS1 Final Project Design (PDF)",
+        "https://github.com/LoganM6281/Dining-Hall-Finder/blob/main/Copy%20of%20CS1%20Final%20Project%201_%20Design%20%281%29.pdf",
+    ),
+    links=["https://github.com/LoganM6281/Dining-Hall-Finder"],
+)
 RATINGS_KEY = "menu-lookup-ratings"
 '''LLM Written Code:'''
 def save_rating(food_name: str, rating: int) -> None:
