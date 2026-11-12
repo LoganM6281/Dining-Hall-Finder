@@ -55,7 +55,7 @@ jobs:
           set -euo pipefail
 
           MAIN_FILE=""
-          for candidate in main.py Main.py app.py App.py; do
+          for candidate in Dining_Hall_Finder_V2.py main.py Main.py app.py App.py; do
             if [[ -f "$candidate" ]]; then
               MAIN_FILE="$candidate"
               break
