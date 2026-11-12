@@ -443,24 +443,7 @@ def search(state: State, Enter_Food: str) -> Page:
     ])
 
                 
-#LLM Written Code       
-'''add_website_css("""
-    #drafter-body-- {
-        background-color: black;
-    }
 
-    #drafter-body--,
-    #drafter-body-- * {
-        color: white;
-        font-weight: bold;
-    }
-
-    #drafter-body-- button,
-    #drafter-body-- input {
-        background-color: black;
-        border: 1px solid white;
-    }
-""")'''
     
 
 start_server(State("", 0.0, False, False, load_ratings()))           
