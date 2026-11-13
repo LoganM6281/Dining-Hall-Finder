@@ -19,7 +19,8 @@ def save_rating(food_name: str, rating: int) -> None:
     '''Saves ratings to a seperate file using json (JavaScript Object Notation).
     from js import localStorage format for storing data over multiple runs of a project, made
     for Java but can be used in python as well.'''
-    from js import localStorage
+    #2nd part LLM Written
+    from js import localStorage  # type: ignore[import-not-found]
     saved = localStorage.getItem(RATINGS_KEY)
     scores_by_food = json.loads(saved) if saved else {}
     scores_by_food.setdefault(food_name, []).append(rating)
@@ -385,6 +386,7 @@ def create_food(contents: list[str]) -> Food:
     Returns:
     a Food object
     '''
+    calories = int(contents[1].split()[0])
     return Food(contents[0], contents[1], contents[2] == "Vegetarian")
 @route
 def search(state: State, Enter_Food: str) -> Page:
